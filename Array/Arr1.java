@@ -1,23 +1,76 @@
-//array initialization 
+//program to enter the values into the array and display them 
 
-class Array1 {
+import java.util.*;
 
-    // initialiazing array
-    int[] age = { 10, 20, 30, 40, 50 };
+class Arr1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the elements of the array:");
+        int arr[] = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(i + " Array elements =" + arr[i]);
+        }
 
-    void display() {
-        System.out.println(age[0]); // 10
-        System.out.println(age[1]); // 20
-        System.out.println(age[2]); // 30
-        System.out.println(age[3]); // 40
-        System.out.println(age[4]); // 50
     }
-
 }
 
-public class Arr1 {
+// program to add the elements of an array
+import java.util.*;
+
+class Arr1 {
     public static void main(String[] args) {
-        Array1 a = new Array1();
-        a.display();
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Enter the " + i + " elemnt:");
+            arr[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        System.out.println("The sum of the given array is =" + sum);
+
+    }
+}
+
+// program to count the no of even and odd elements of the given array
+class Arr1 {
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        System.out.println("No of even elemets =" + even + " odd no of elements=" + odd);
+
+    }
+}
+
+// program to find the minimum and maximum number in the given array
+
+class Arr1 {
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 85, 97, 75, -1, 0 };
+        int min = arr[0];
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+
+        }
+        System.out.println("The minimum element= " + min + " The maximum element=" + max);
     }
 }
